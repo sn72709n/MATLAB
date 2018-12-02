@@ -4,7 +4,7 @@ clear all; close all; clc;
 %pontosságosság
 figure(1)
 hold on;
-ennyiszog=3;
+ennyiszog=100
 
 n=ennyiszog-1;
 
@@ -22,21 +22,20 @@ hold on;
 axis equal
  grid on;
 
-%plot([0,0],[0,1])
-v=[1 0]
+v=[1 0];
 
 for ii=0:n+1
 
 
 
-R=[cos(fi) -sin(fi); sin(fi) cos(fi)]
+R=[cos(fi) -sin(fi); sin(fi) cos(fi)];
 
 
 
-u=(R^ii)*(v')
+u=(R^ii)*(v');
 hold on
-plot([0 u(2)],[0 u(1)])
-norm(v)
+plot([0 u(2)],[0 u(1)]);
+%norm(v)
 
 
 
@@ -44,7 +43,11 @@ end
 
 oldal=2*1*tan(pi/ennyiszog);
     kerulet=oldal*ennyiszog;
+    format long
    makepi=kerulet/(2*1)
+   
+   deltapi=abs(pi-makepi)
 
- %plot([0, 1] );
-%end
+   
+   
+
